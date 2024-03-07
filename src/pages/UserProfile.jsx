@@ -1,15 +1,11 @@
-import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import reactSVG from "../assets/react.svg";
 
 function UserProfile() {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
-  if (isLoading) {
-    return <p className="m-5 text-gray-600 text-sm">Loading...</p>;
-  }
   return isAuthenticated ? (
-    <div className="user-profile m-5 p-5 w-96 flex flex-col items-center gap-5 card bg-white rounded-xl shadow-lg">
+    <div className="user-profile bg-gray-100 m-5 p-5 w-96 flex flex-col items-center gap-5 card bg-white rounded-xl shadow-lg">
       <img
         src={reactSVG}
         alt="Profile"
@@ -21,7 +17,7 @@ function UserProfile() {
       </section>
     </div>
   ) : (
-    <p className="m-5 text-gray-600 text-sm">- 未登录 -</p>
+    <p className="m-5 text-gray-600 text-sm">- 用户未登录 -</p>
   );
 }
 
