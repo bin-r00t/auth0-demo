@@ -8,6 +8,8 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* clientId="JJgOeuG5O25flKZE5oUWsrnwMrmBwnTN" */}
+    {/* clientId="GFJ1LlDKTtFCIAyPqYTG8JrsdVHfhPOA" */}
     <Auth0Provider
       domain="dev-c076dpbpqwgr208x.jp.auth0.com"
       clientId="JJgOeuG5O25flKZE5oUWsrnwMrmBwnTN"
