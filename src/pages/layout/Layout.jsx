@@ -1,9 +1,22 @@
+import { useEffect } from "react";
+import BottomFooter from "../../components/BottomFooter";
+import TopHeader from "../../components/TopHeader";
+import { useAuth0 } from "@auth0/auth0-react";
+
 function Layout() {
+  const { isAuthenticated } = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+    } else {
+    }
+  }, [isAuthenticated]);
+
   return (
     <>
-      <header className="h-32 bg-gray-300 text-white uppercase">header</header>
+      <TopHeader />
       <main className="flex-1">main</main>
-      <footer className="h-32 bg-gray-300 text-white">footer</footer>
+      <BottomFooter />{" "}
     </>
   );
 }

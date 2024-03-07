@@ -1,5 +1,14 @@
 /** app's global styles */
-html, body {
-    height: 100%;
-    background: #e5e5e5;
+html,
+body {
+  height: 100%;
+  background: #e5e5e5;
+}
+
+#logo {
+  width: 48px;
+  height: 48px;
+  background: url("./assets/main-logo-transparent.svg") no-repeat;
+  background-size: 350%;
+  background-position: 50% 40%;
 }
